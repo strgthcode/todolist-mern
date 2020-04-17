@@ -21,8 +21,13 @@ url
 .then(()=> console.log(`Database connected succesfully`))
 .catch((err) => console.log(err));
 
+mongoose.Promise = global.Promise;
 
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(bodyParser.json());
 
