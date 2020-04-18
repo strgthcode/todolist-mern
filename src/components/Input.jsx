@@ -42,8 +42,8 @@ export default function Input(){
 
     return(
         <>
+            <h1>Add your To Do(s)</h1>       
             <div className='input'>
-                <h1>Add your To Do(s)</h1>
                 <input 
                     type='text' 
                     placeholder='Enter your To Do(s)'

@@ -24,6 +24,9 @@ export default function TodoList() {
             key={todos._id}
             id={todos._id}
             action={todos.action}
+            onDelete={()=>{
+                getTodos();
+            }}
         />
         )
     }
@@ -32,22 +35,23 @@ export default function TodoList() {
    
     return(
         <>
-            <div className='todo-list'>
-                <table className='table'>
-                    <thead className='table-header'>
+            <h1>Your To Do(s)</h1>        
+            <div>
+                <table>
+                    <thead>
                         <tr>
-                            <th>
-                                Your To Do(s)
-                            </th>
+                            <th className='table-head description'>Description</th>
+                            <th className='table-head action'>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
-                            {todos.map(renderTodos)}
-                       
+                        {todos.map(renderTodos)}
                     </tbody>
                 </table>
-            </div>
+            </div>      
+                    
+                
+            
         </>
      )
     
