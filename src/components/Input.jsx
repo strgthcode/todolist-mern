@@ -12,7 +12,7 @@ export default function Input(){
 
         setInput({
             action: value
-        })
+        });
     }
 
 
@@ -26,10 +26,10 @@ export default function Input(){
 
                       setInput({
                           action: ""
-                      })
+                      });
                       
                   } else {
-                      console.log('input field required')
+                      console.log('input field required');
                   }
               })
               .catch(err => console.error(err));
