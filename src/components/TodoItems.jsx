@@ -24,7 +24,7 @@ export default function TodoItems(props){
                     {props.action} 
                 </td>
                 <td className='body-items'>
-                    <button className='action-buttons'>Edit</button>
+                    {/* <button className='action-buttons'>Edit</button> */}
                     <button className='action-buttons' onClick={handleDelete}>Complete</button>
                 </td>
             </tr>
